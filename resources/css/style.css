@@ -1,0 +1,425 @@
+body {
+    margin:0;
+    height: 100%;
+    font-family: 'Syne Mono', monospace;
+    font-size: 18px;
+    background-color:rgb(235, 225, 225);
+}
+
+.bg {
+    background-image: url("/resources/img/sl2.png");
+    background-position: center;
+    background-size: cover;
+    height: 100%;
+    
+}
+
+h1 {
+   font-size: 200%; 
+   color:rgb(82, 69, 43);
+   text-transform: uppercase;
+   word-spacing: 1px;
+   letter-spacing: 1px;
+}
+
+h2 {
+    color: rgb(82, 69, 43);
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+h2:after {
+    display:block;
+    content: " ";
+    background-color: wheat;
+    height: 5px;
+    width:100px;
+    margin: auto;
+    margin-bottom: 10px;
+    
+}
+
+h4{
+    color:rgb(172, 148, 109);
+    text-transform: uppercase;
+}
+
+h5 {
+    color:rgb(172, 148, 109);
+}
+
+.title_bg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50px, -50px);
+}
+
+.lg_nav {
+  
+    display: inline-block;
+}
+
+.logo_class {
+    margin-top:20px;
+    width: 50px;
+    height:50px;
+    float: left;
+    display: none;
+}
+
+.nav_list {
+    float:right;
+    margin-top:0;
+    margin-left: 50px;
+    margin-top:30px;
+    
+}
+
+.nav_list li {
+    display: inline-block;
+    
+
+    
+
+}
+
+.nav_list li a {
+    list-style: none;
+    text-decoration: none;
+    padding-right: 20px;
+    text-transform: uppercase;
+    color: rgb(172, 148, 109);
+    font-weight: 300;
+    font-weight: bold;
+    
+}
+
+.nav_list li a:hover, 
+.nav_list li a:active{
+    border-bottom: 2px solid lightcoral;
+    font-size:110%;
+
+}
+
+.mobile-nav-icon {
+  float: right;
+  margin-top: 30px;
+  cursor: pointer;
+  display: none;
+}
+
+.mobile-nav-icon i {
+  font:200%;
+  color:#ffffff;
+}
+
+/*
+Nav sticky*/
+
+.link_class {
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    background-color:rgb(235, 225, 225);
+    box-shadow: 0 2px 2px #efefef;
+    z-index: 9999;
+}
+
+
+
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    
+    width:100%;
+    margin: 0;
+    overflow: hidden;
+    
+    
+    
+  }
+  .grid-item {
+    background-color:black;
+    width:100%;
+    height:auto;    
+    overflow: hidden;
+   
+  }
+
+  .grid-item img {
+    width:100%;
+    height:auto;
+    transform: scale(1.03);
+    transition: transform 0.5s, opacity 0.5s;
+    opacity: 0.5;
+  }
+
+  .grid-item img:hover{
+    transform:scale(1.09);
+    opacity: 1;
+}
+
+.tech-class {
+    text-align: center;
+}
+
+.grid-container-exp {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    width: 100%;
+    margin:0;
+}
+
+/* .section_experience {
+    background-color: greenyellow;
+   
+} */
+
+.grid-item-exp {
+    padding:2px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    background-color: white;
+    width:90%;
+    padding: 0;
+}
+
+.grid-item-exp ul {
+    text-align: start;
+    padding-left: 0;
+}
+.grid-item-exp li {
+    list-style: none;
+
+}
+
+
+
+
+.top-class {
+    
+    color:rgb(172, 148, 109);
+    font-weight: 300;
+    font-size: 100%;
+    float:right;
+   margin-bottom: 15px;
+    text-decoration: none;
+    
+    
+    
+}
+
+.top-class:hover {
+    font-size:110% ;
+}
+
+
+
+
+footer {
+    background-color: rgb(68, 63, 63);
+    padding:5px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/*Animation */
+
+.js--grid-container,
+.js--exp {
+    opacity: 0;
+}
+
+.js--grid-container.animate__animated,
+.js--exp.animate__animated {
+    opacity:1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.popup-overlay {
+  /*Hidespop-upwhenthereisno"active"class*/visibility: hidden;
+  position: absolute;
+  background: #ffffff;
+  border: 3px solid #666666;
+  width: 50%;
+  height: 50%;
+  left: 25%;
+  transform: translate(50px, -20px) ;
+  -webkit-transform: translate(50px, -20px) ;
+  -moz-transform: translate(50px, -20px) ;
+  -ms-transform: translate(50px, -20px) ;
+  -o-transform: translate(50px, -20px) ;
+
+}
+
+.popup-overlay.active {
+  /*displays pop-up when "active" class is present*/
+  visibility: visible;
+  text-align: center;
+}
+
+.popup-content {
+  /*Hides pop-up content when there is no "active" class */
+  visibility: hidden;
+}
+
+.popup-content.active {
+  /*Shows pop-up content when "active" class is present */
+  visibility: visible;
+}
+
+button {
+  display: inline-block;
+  vertical-align: middle;
+  border-radius: 30px;
+  margin: .20rem;
+  font-size: 1rem;
+  color: #666666;
+  background: #ffffff;
+  border: 1px solid #666666;
+}
+
+button:hover {
+  border: 1px solid #666666;
+  background: #666666;
+  color: #ffffff;
+}
+
+
+
+
+
+
+
+
+
+
+
+.popup-overlay-1 {
+    /*Hidespop-upwhenthereisno"active"class*/visibility: hidden;
+    position: absolute;
+    background: #ffffff;
+    border: 3px solid #666666;
+    width: 50%;
+    height: 50%;
+    left: 25%;
+    transform: translate(50px, -20px) ;
+    -webkit-transform: translate(50px, -20px) ;
+    -moz-transform: translate(50px, -20px) ;
+    -ms-transform: translate(50px, -20px) ;
+    -o-transform: translate(50px, -20px) ;
+    
+  }
+  
+  .popup-overlay-1.active {
+    /*displays pop-up when "active" class is present*/
+    visibility: visible;
+    text-align: center;
+    
+  }
+  
+  .popup-content-1 {
+    /*Hides pop-up content when there is no "active" class */
+    visibility: hidden;
+  }
+  
+  .popup-content-1.active {
+    /*Shows pop-up content when "active" class is present */
+    visibility: visible;
+    
+  }
+
+
+
+
+
+
+  
+.popup-overlay-2 {
+    /*Hidespop-upwhenthereisno"active"class*/visibility: hidden;
+    position: absolute;
+    background: #ffffff;
+    border: 3px solid #666666;
+    width: 50%;
+    height: 50%;
+    left: 25%;
+    transform: translate(50px, -20px) ;
+    -webkit-transform: translate(50px, -20px) ;
+    -moz-transform: translate(50px, -20px) ;
+    -ms-transform: translate(50px, -20px) ;
+    -o-transform: translate(50px, -20px) ;
+  }
+  
+  .popup-overlay-2.active {
+    /*displays pop-up when "active" class is present*/
+    visibility: visible;
+    text-align: center;
+  }
+  
+  .popup-content-2 {
+    /*Hides pop-up content when there is no "active" class */
+    visibility: hidden;
+  }
+  
+  .popup-content-2.active {
+    /*Shows pop-up content when "active" class is present */
+    visibility: visible;
+  }
+
+
+
+
+
+
+
+
+   
+.popup-overlay-3 {
+    /*Hidespop-upwhenthereisno"active"class*/visibility: hidden;
+    position: absolute;
+    background: #ffffff;
+    border: 3px solid #666666;
+    width: 50%;
+    height: 50%;
+    left: 25%;
+    transform: translate(50px, -20px) ;
+    -webkit-transform: translate(50px, -20px) ;
+    -moz-transform: translate(50px, -20px) ;
+    -ms-transform: translate(50px, -20px) ;
+    -o-transform: translate(50px, -20px) ;
+  }
+  
+  .popup-overlay-3.active {
+    /*displays pop-up when "active" class is present*/
+    visibility: visible;
+    text-align: center;
+  }
+  
+  .popup-content-3 {
+    /*Hides pop-up content when there is no "active" class */
+    visibility: hidden;
+  }
+  
+  .popup-content-3.active {
+    /*Shows pop-up content when "active" class is present */
+    visibility: visible;
+  }
